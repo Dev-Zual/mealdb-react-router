@@ -3,7 +3,7 @@ import Category from "../Category";
 
 const Categories = () => {
   const categories = useLoaderData();
-  console.log(categories);
+
   return (
     <div className="grid grid-cols-3 gap-5">
       {categories.categories.map((category) => (

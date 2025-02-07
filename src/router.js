@@ -11,6 +11,10 @@ let router = createBrowserRouter([
   },
   {
     path: "all/:cat",
+    loader: ({ params }) =>
+      fetch(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.cat}`
+      ),
     Component: AllFood,
   },
 ]);
